@@ -85,50 +85,8 @@ def get_random_color():
     return random.choice([c1,c2])
     
 
-f = open('.quotes.txt', 'r')
+f = open('quotes.txt', 'r')
 txt = f.read()
 lines = txt.split('\n.\n')
 
 print_color(random.choice(lines), fg=get_random_color())
-#print("\033[{0}m{1}{2}".format(random.choice(range(31,36)), random.choice(lines),  default))
-
-"""
-if __name__ == '__main__':
-    # Print a test graphic showing all colors.
-    print('System colors:')
-    for c in range(8):
-        print_color('  ', bg=c, end='')
-    print()
-    for c in range(8, 16):
-        print_color('  ', bg=c, end='')
-    print()
-    print()
-
-    print('RGB color cube, 6x6x6:')
-    for green in range(6):
-        for red in range(6):
-            for blue in range(6):
-                print_color('  ', bg=rgb(red, green, blue), end='')
-            print(' ', end='')
-        print()
-    print()
-
-    print('Grayscale ramp, with RGB grays:')
-    for value in range(24):
-        print_color('  ', bg=gray(value), end='')
-    print()
-
-    print_color('  ', bg=rgb(0, 0, 0), end='')
-    print('  '*7, end='')
-    print_color('    ', bg=rgb(1, 1, 1), end='')
-    print('  '*2, end='')
-    print_color('    ', bg=rgb(2, 2, 2), end='')
-    print('  '*2, end='')
-    print_color('    ', bg=rgb(3, 3, 3), end='')
-    print('  '*2, end='')
-    print_color('    ', bg=rgb(4, 4, 4), end='')
-    print('  ', end='')
-    print_color('  ', bg=rgb(5, 5, 5), end='')
-    print()
-    """
-
