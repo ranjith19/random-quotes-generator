@@ -1,5 +1,6 @@
 from __future__ import print_function
 import random
+import os
 
 
 # System color name constants.
@@ -84,8 +85,8 @@ def get_random_color():
     c2 = random.choice(range(1,15))
     return random.choice([c1,c2])
     
-
-f = open('quotes.txt', 'r')
+quote_file = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'quotes.txt')
+f = open(quote_file, 'r')
 txt = f.read()
 lines = txt.split('\n.\n')
 
